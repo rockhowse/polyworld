@@ -18,7 +18,10 @@ First install Polyworld's dependencies:
    sudo apt-get install build-essential xorg-dev libgl1-mesa-dev scons cvs libgsl0-dev libqt4-opengl-dev python2.7-dev
 
    *NOTE* On unbutu, we had to include the python2.7-dev to fix the #include <Python.h> and other header file issues.
-   Solution taken from here: http://stackoverflow.com/questions/8282231/ubuntu-i-have-python-but-gcc-cant-find-python-h
+   
+Solution taken from here: 
+
+    http://stackoverflow.com/questions/8282231/ubuntu-i-have-python-but-gcc-cant-find-python-h
 
 Then get your code from this github repo or fork it to your own and clone from there:
 
