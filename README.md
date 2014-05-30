@@ -36,7 +36,7 @@ If you attempt make at this point you will get two errors:
   
 To fix this, add the directives "-pthread -ldl" to the very last g++ linker command example: 
 
-    g++ -oPolyworld ... -pthread -ldl
+    g++ -o Polyworld ... -pthread -ldl
 
 Here is what each one fixes:
 
