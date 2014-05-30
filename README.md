@@ -28,8 +28,8 @@ We then need to add a couple of symbolic links that are
 
 If you attempt make at this point you will get two errors:
 
-1. /usr/bin/ld: .bld/Polyworld/utils/Mutex.o: undefined reference to symbol 'pthread_spin_init@@GLIBC_2.2.5'
-2. /usr/bin/ld: .bld/Polyworld/proplib/cppprops.o: undefined reference to symbol 'dlsym@@GLIBC_2.2.5'
+    # /usr/bin/ld: .bld/Polyworld/utils/Mutex.o: undefined reference to symbol 'pthread_spin_init@@GLIBC_2.2.5'
+    # /usr/bin/ld: .bld/Polyworld/proplib/cppprops.o: undefined reference to symbol 'dlsym@@GLIBC_2.2.5'
   
 To fix this, add the directives "-pthread -ldl" to the very last g++ command example: (g++ ./Polyworld ... -pthread)
 
