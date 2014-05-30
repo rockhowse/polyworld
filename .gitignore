@@ -20,9 +20,32 @@
 moc_*.cpp
 qrc_*.cpp
 ui_*.h
-Makefile*
 *-build-*
 
 # QtCreator
 
 *.autosave
+
+build
+.bld
+.sconsign.dblite
+Polyworld
+bin
+src
+worldfile
+Polyworld.xcode/*.pbxuser
+.DS_Store
+*.diff
+*.patch
+*.eps
+.moc
+moc
+.gdb_history
+Polyworld.app
+pw.eddie
+.obj
+Polyworld_xc.app
+Polyworld_qt.app
+.xobj
+worldfile.*
+
