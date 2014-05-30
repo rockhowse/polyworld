@@ -38,6 +38,8 @@ To fix this, add the directives "-pthread -ldl" to the very last g++ command exa
 
     g++ ./Polyworld ... -pthread -ldl
 
+Here is what each one fixes:
+
     -pthread ~ resolves the pthread_spin_init error.
     -ldl     ~ resolves the dslym error.
 
