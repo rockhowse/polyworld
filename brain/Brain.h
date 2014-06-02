@@ -9,7 +9,7 @@
 #include "NeuralNetRenderer.h"
 #include "NeuronModel.h"
 #include "objectlist.h"
-#include "proplib.h"
+#include "proplib/proplib.h"
 
 
 #define DebugBrainGrow false

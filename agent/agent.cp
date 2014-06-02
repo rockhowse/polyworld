@@ -7,7 +7,7 @@
 #include "agent.h"
 
 // System
-#include <gl.h>
+#include <GL/gl.h>
 #include <string.h>
 
 // qt
@@ -27,9 +27,9 @@
 #include "GenomeUtil.h"
 #include "graphics.h"
 #include "graybin.h"
-#include "GroupsBrain.h"
+#include "groups/GroupsBrain.h"
 #include "misc.h"
-#include "Logs.h" // tmp include
+#include "logs/Logs.h" // tmp include
 #include "MateWaitSensor.h"
 #include "Metabolism.h"
 #include "NervousSystem.h"

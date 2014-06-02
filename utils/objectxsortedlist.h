@@ -4,7 +4,7 @@
 #define NEXT 1
 #define PREV 2
 
-#include "cppprops.h"
+#include "proplib/cppprops.h"
 #include "gdlink.h"
 #include "gobject.h"
 #include "food.h"
