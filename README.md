@@ -56,3 +56,18 @@ For the analysis tools you will also need to install the following dependencies:
 
 All these installed fine for me, so nothing extra for Unbutu 14.
 
+QTCreator
+=====================
+The original code I found didn't include a .pro file for building inside QTCreator. I have included a new polyworld.pro file that has the configuration I used. Basically, it does the following:
+
+1. Includes all the base directories/.cp/.h file from the main folders in the polyworld project
+2. I had to specify a specific C++ standard becasue by default it tried to use C++98
+ 
+    QMAKE_CC = g++ -std=c++11
+
+3. I had to add a bunch of libraries to the linking path in the .pro file as I saw no way to do it easily inside QTCreator GUI itself
+
+    LIBS += -pthread -ldl -lz -lgsl -lgslcblas -lGL -lGLU -lpython2.7
+
+I have yet to test and see if the application runs as intended. At this point it fully compiles inside QTCreator5.x on Mint 14 so I am making progress.
+ 
