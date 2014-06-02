@@ -4,7 +4,7 @@
 // System
 #include <iostream>
 
-#include <glu.h>
+#include <GL/glu.h>
 #include <stdio.h>
 
 // Local

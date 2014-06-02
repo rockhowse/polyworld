@@ -1,7 +1,7 @@
 // Self
 #include "BrainMonitorView.h"
 
-#include <glu.h>
+#include <GL/glu.h>
 
 // Local
 #include "agent.h"

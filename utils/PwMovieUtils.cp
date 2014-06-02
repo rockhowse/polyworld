@@ -30,7 +30,7 @@
 
 #include <iostream>
 
-#include <gl.h>
+#include <GL/gl.h>
 #include <QGLWidget>
 #include <QGLPixelBuffer>
 

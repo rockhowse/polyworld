@@ -1,7 +1,7 @@
 // Self
 #include "StatusTextMonitorView.h"
 
-#include <glu.h>
+#include <GL/glu.h>
 
 // Local
 #include "misc.h"
