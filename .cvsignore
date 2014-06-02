@@ -1,31 +1,3 @@
-# C++ objects and libs
-
-*.slo
-*.lo
-*.o
-*.a
-*.la
-*.lai
-*.so
-*.dll
-*.dylib
-
-# Qt-es
-
-/.qmake.cache
-/.qmake.stash
-*.pro.user
-*.pro.user.*
-*.moc
-moc_*.cpp
-qrc_*.cpp
-ui_*.h
-*-build-*
-
-# QtCreator
-
-*.autosave
-
 build
 .bld
 .sconsign.dblite
@@ -48,4 +20,4 @@ Polyworld_xc.app
 Polyworld_qt.app
 .xobj
 worldfile.*
-/run*
+
