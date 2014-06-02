@@ -12,7 +12,7 @@
 
 #include <GL/gl.h>
 
-#include "proplib/proplib.h"
+#include "proplib.h"
 
 struct Color
 {

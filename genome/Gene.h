@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-#include "proplib/cppprops.h"
+#include "cppprops.h"
 #include "NeurGroupType.h"
 #include "Scalar.h"
 

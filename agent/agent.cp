@@ -27,9 +27,9 @@
 #include "GenomeUtil.h"
 #include "graphics.h"
 #include "graybin.h"
-#include "groups/GroupsBrain.h"
+#include "GroupsBrain.h"
 #include "misc.h"
-#include "logs/Logs.h" // tmp include
+#include "Logs.h" // tmp include
 #include "MateWaitSensor.h"
 #include "Metabolism.h"
 #include "NervousSystem.h"

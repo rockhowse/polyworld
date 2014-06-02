@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include "proplib/cppprops.h"
+#include "cppprops.h"
 
 // We allocate arrays for the maximum potential number of energy types so that
 // we don't have to malloc an array for every Energy instantiated. We want class
