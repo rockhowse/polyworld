@@ -4,6 +4,7 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #include <fstream>
 #include <sstream>
@@ -17,9 +18,9 @@
 using namespace proplib;
 using namespace std;
 
-#define SrcCppprops ".bld/cppprops/src/generated.cpp"
+#define SrcCppprops "/home/mint/polyworld/.bld/cppprops/src/generated.cpp"
 #if __linux__
-#define LibCppprops ".bld/cppprops/bin/libcppprops.so"
+#define LibCppprops "/home/mint/polyworld/.bld/cppprops/bin/libcppprops.so"
 #else
 #define LibCppprops ".bld/cppprops/bin/libcppprops.dylib"
 #endif
@@ -70,7 +71,14 @@ void CppProperties::init( Document *doc, UpdateContext *context )
 
 	generateLibrarySource();
 
-	SYSTEM( "scons -f scripts/build/SConstruct " LibCppprops " 1>/dev/null" );
+    //replacing with in-line code
+    //SYSTEM( "scons -f /home/mint/polyworld/scripts/build/SConstruct " LibCppprops " 1>/dev/null" );
+    char * cmd = "scons -f /home/mint/polyworld/scripts/build/SConstruct " LibCppprops " 1>/dev/null";
+
+    int rc = system(cmd);
+    if(rc != 0) {
+        fprintf(stderr, "Failed executing command '%s.'\n", cmd);
+    }
 
 	void *libHandle = dlopen( LibCppprops, RTLD_LAZY );
 	errif( !libHandle, "Failed opening " LibCppprops );
