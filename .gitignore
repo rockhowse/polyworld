@@ -26,7 +26,8 @@ ui_*.h
 
 *.autosave
 
-build
+#need this for polyworld/scripts/build
+#build
 .bld
 .sconsign.dblite
 Polyworld

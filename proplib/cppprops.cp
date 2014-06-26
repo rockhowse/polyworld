@@ -4,7 +4,6 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 
 #include <fstream>
 #include <sstream>
@@ -18,9 +17,9 @@
 using namespace proplib;
 using namespace std;
 
-#define SrcCppprops "/home/mint/polyworld/.bld/cppprops/src/generated.cpp"
+#define SrcCppprops ".bld/cppprops/src/generated.cpp"
 #if __linux__
-#define LibCppprops "/home/mint/polyworld/.bld/cppprops/bin/libcppprops.so"
+#define LibCppprops ".bld/cppprops/bin/libcppprops.so"
 #else
 #define LibCppprops ".bld/cppprops/bin/libcppprops.dylib"
 #endif
@@ -71,16 +70,32 @@ void CppProperties::init( Document *doc, UpdateContext *context )
 
 	generateLibrarySource();
 
-    //replacing with in-line code
-    //SYSTEM( "scons -f /home/mint/polyworld/scripts/build/SConstruct " LibCppprops " 1>/dev/null" );
-    char * cmd = "scons -f /home/mint/polyworld/scripts/build/SConstruct " LibCppprops " 1>/dev/null";
+    char scons_cmd[256];
 
-    int rc = system(cmd);
-    if(rc != 0) {
-        fprintf(stderr, "Failed executing command '%s.'\n", cmd);
+    sprintf(scons_cmd, "scons -f scripts/build/SConstruct2 %s 1>/dev/null",
+            LibCppprops);
+
+    printf("Running command: %s\n", scons_cmd);
+
+    SYSTEM( scons_cmd);
+
+    void *libHandle = dlopen(LibCppprops, RTLD_LAZY );
+
+
+    char *errstr;
+    errstr = dlerror();
+    if (errstr != NULL)
+        printf ("A dynamic linking error occurred: (%s)\n", errstr);
+
+    if (!libHandle) {
+        fprintf(stderr, "%s\n", dlerror());
     }
 
-	void *libHandle = dlopen( LibCppprops, RTLD_LAZY );
+    if(dlerror() != NULL) {
+        sprintf(scons_cmd, "Error while trying to open dynamic library: %s",
+                dlerror());
+    }
+
 	errif( !libHandle, "Failed opening " LibCppprops );
 
 	typedef void (*LibraryInit)( UpdateContext *context );

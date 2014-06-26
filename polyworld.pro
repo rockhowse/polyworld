@@ -1,4 +1,4 @@
-TEMPATE = app
+TEMPLATE = app
 
 CONFIG += qt warn_on debug
 
@@ -6,11 +6,10 @@ QT += opengl
 
 # qmake selects gcc for cp files
 # Some of the code depends on C++11 standard so set it here
-QMAKE_CC = g++ -std=c++11
+QMAKE_CC = g++ -std=gnu++0x
 
 # libraries needed to compile
-LIBS += -pthread -ldl -lz -lgsl -lgslcblas -lGL -lGLU -lpython2.7
-
+LIBS += -rdynamic -pthread -ldl -lz -lgsl -lgslcblas -lGL -lGLU -lpython2.7
 
 INCLUDEPATH += . \
                agent \
@@ -281,5 +280,11 @@ SOURCES += app/Simulation.cp \
     utils/PwMovieUtils.cp \
     utils/Mutex.cp \
     utils/AbstractFile.cp
+
+OTHER_FILES += \
+    Makefile \
+    scripts/build/SConstruct \
+    scripts/build/scons_util.py \
+    scripts/build/SConstruct2
 
 

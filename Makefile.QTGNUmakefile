@@ -10,7 +10,7 @@ MAKEFILE      = Makefile
 
 ####### Compiler, tools and options
 
-CC            = g++ -std=gnu++0x
+CC            = g++ -std=c++11
 CXX           = g++
 DEFINES       = -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIE $(DEFINES)
@@ -18,7 +18,7 @@ CXXFLAGS      = -pipe -g -Wall -W -D_REENTRANT -fPIE $(DEFINES)
 INCPATH       = -I../Qt/5.3/gcc_64/mkspecs/linux-g++ -I. -I. -Iagent -Iapp -Ibrain -Ibrain/groups -Ibrain/sheets -Icomplexity -Icritter -Ienvironment -Igenome -Igenome/groups -Igenome/sheets -Igraphics -Ilogs -Imonitor -Iproplib -Iui -Iui/gui -Iui/term -Iutils -I/usr/include/python2.7 -I../Qt/5.3/gcc_64/include -I../Qt/5.3/gcc_64/include/QtOpenGL -I../Qt/5.3/gcc_64/include/QtWidgets -I../Qt/5.3/gcc_64/include/QtGui -I../Qt/5.3/gcc_64/include/QtCore -I.
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/mint/Qt/5.3/gcc_64 -Wl,-rpath,/home/mint/Qt/5.3/gcc_64/lib
-LIBS          = $(SUBLIBS) -rdynamic -pthread -ldl -lz -lgsl -lgslcblas -lGLU -lpython2.7 -L/home/mint/Qt/5.3/gcc_64/lib -lQt5OpenGL -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -pthread -ldl -lz -lgsl -lgslcblas -lGLU -lpython2.7 -L/home/mint/Qt/5.3/gcc_64/lib -lQt5OpenGL -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 QMAKE         = /home/mint/Qt/5.3/gcc_64/bin/qmake
