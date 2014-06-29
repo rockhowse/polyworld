@@ -275,7 +275,7 @@ TSimulation::TSimulation( string worldfilePath, string monitorPath )
 	proplib::Document *worldfile;
 	{
 		proplib::DocumentBuilder builder;
-        schema = builder.buildSchemaDocument( "/home/mint/polyworld/etc/worldfile.wfs" );
+        schema = builder.buildSchemaDocument( "./etc/worldfile.wfs" );
 		worldfile = builder.buildWorldfileDocument( schema, worldfilePath );
 
 		{
