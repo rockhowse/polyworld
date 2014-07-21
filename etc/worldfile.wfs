@@ -104,7 +104,7 @@ MaxSteps {
 
 MinAgents {
   type    Int
-  default 90
+  default 1
   min     0
 }
 
@@ -116,7 +116,7 @@ MaxAgents {
 
 InitAgents {
   type    Int
-  default 180
+  default 1
   min     MinAgents
   max     MaxAgents
 }

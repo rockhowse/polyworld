@@ -45,8 +45,9 @@ GrayCoding          True
 ################################################################################
 MaxSteps        200000
 SeedAgents      0
-AgentsAreFood   False
-EnableCarry     False
+AgentsAreFood   True
+EnableCarry     True
+MaxAgents       1
 
 RecordContacts True
 

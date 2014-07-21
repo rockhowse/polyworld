@@ -285,6 +285,8 @@ OTHER_FILES += \
     Makefile \
     scripts/build/SConstruct \
     scripts/build/scons_util.py \
-    scripts/build/SConstruct2
+    scripts/build/SConstruct2 \
+    sandbox/social/feed_young.wf \
+    etc/worldfile.wfs
 
 
