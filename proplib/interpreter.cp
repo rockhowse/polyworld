@@ -141,7 +141,7 @@ string Interpreter::ExpressionEvaluator::evaluate( Property *prop )
 
 bool Interpreter::alive = false;
 
-void Interpreter::init()
+void Interpreter::init_python()
 {
 	assert( !alive );
 	Py_Initialize();

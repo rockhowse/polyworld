@@ -247,7 +247,8 @@ TSimulation::TSimulation( string worldfilePath, string monitorPath )
 
     srand(1);
 
-	proplib::Interpreter::init();
+    // initialize the python interpreter
+    proplib::Interpreter::init_python();
 
 	// ---
 	// --- Create the run directory

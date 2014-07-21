@@ -43,7 +43,7 @@ namespace proplib
 		// --- API
 		// ----------------------------------------------------------------------
 		// ----------------------------------------------------------------------
-		static void init();
+        static void init_python();
 		static void dispose();
 
 	private:
